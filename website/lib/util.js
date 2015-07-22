@@ -15,6 +15,7 @@ module.exports =
     }
 
     req.user = payload.sub; 
+      console.log(req.user);
     next();
   },
   createToken: function(user) {

@@ -1,0 +1,14 @@
+<section ng-controller="HomeCtrl as home">
+    <header ng-show="home.landing" class="row">
+        <div ng-include="'app/core/views/app-core-navbar.html'" ></div>
+    </header>
+
+    <section class="row">
+
+    </section>
+
+    <footer class="row">
+       <button class="btn btn-success pull-right hidden-xs" ng-click="home.showNav()"><i class="icon ion-android-more-vertical"></i></button>
+    </footer>
+</section>
+

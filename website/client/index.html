@@ -4,35 +4,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
         <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="vendor/angular-ui-growl/css/growl.css" rel="stylesheet"/>
+        <link href="css/login.css" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet" />
     </head>
-    <body class="container-fluid" ng-controller="HomeCtrl as home">
-        <header ng-show="home.landing" class="row">
-            <div ng-include="'app/core/views/app-core-navbar.html'" ></div>
-        </header>
-        
-        <section class="row">
-             
-        </section>
-        
-        <footer class="row">
-           <button class="btn btn-success pull-right hidden-xs" ng-click="home.showNav()"><i class="icon ion-android-more-vertical"></i></button>
-        </footer>
+    <body class="container-fluid">
+         <ui-view></ui-view>
+
 
         <!-- Third-party CDN Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="//cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
 
         <!-- Third-party Libraries -->
         <script src="vendor/angular/angular.min.js"></script> 
+        <script src="vendor/ui-router/release/angular-ui-router.min.js"></script>
+        <script src="vendor/angular-ui-growl/src/growl.js"></script>
         
         <!-- Custom Code -->
+        <script src="app/auth/app-auth.module.js"></script>
+        <script src="app/auth/models/app-auth.service.js"></script>
+        <script src="app/auth/controllers/app-auth-account.controller.js"></script>      
+        
         <script src="app/core/app-core.module.js"></script>
         <script src="app/core/models/app-core-home.service.js"></script>
         <script src="app/core/controllers/app-core-home.controller.js"></script>
         
-        <script src="app/app.js"></script>                       
+
+        
+        <script src="app/app.js"></script> 
+        <script src="app/routes.js"></script>
         
                                 
     </body>

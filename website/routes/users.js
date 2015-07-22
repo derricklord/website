@@ -20,10 +20,11 @@ router.get('/:id', function(req, res) {
     
 router.post('/', function(req, res) {
   var user = new User(req.body);
-  User.save(function(err) {
+
+  user.save(function(err) {
     res.send({ user: user });
   });
-
+    
 });
     
 router.put('/:id', function(req, res) {
