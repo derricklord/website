@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="website">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/app.css" rel="stylesheet" />
+    </head>
+    <body class="container-fluid" ng-controller="HomeCtrl as home">
+        <header ng-show="home.landing" class="row">
+            <div ng-include="'app/core/views/app-core-navbar.html'" ></div>
+        </header>
+        
+        <section class="row">
+             
+        </section>
+        
+        <footer class="row">
+           <button class="btn btn-success pull-right hidden-xs" ng-click="home.showNav()"><i class="icon ion-android-more-vertical"></i></button>
+        </footer>
+
+        <!-- Third-party CDN Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="//cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script>
+
+        <!-- Third-party Libraries -->
+        <script src="vendor/angular/angular.min.js"></script> 
+        
+        <!-- Custom Code -->
+        <script src="app/core/app-core.module.js"></script>
+        <script src="app/core/models/app-core-home.service.js"></script>
+        <script src="app/core/controllers/app-core-home.controller.js"></script>
+        
+        <script src="app/app.js"></script>                       
+        
+                                
+    </body>
+</html>

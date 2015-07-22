@@ -1,0 +1,15 @@
+body{
+    margin: 80px;
+}
+
+.custom-nav{
+    background-color: rgba(0,34,0, .5);
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
